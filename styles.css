@@ -134,10 +134,10 @@ h1{
 }
 
 .hero-card.hero-image img{
-  width:70%;                 /* ↓ reduce size by ~50% */
+  width:96%;                 /* ↓ reduce size by ~50% */
   height:auto;
-  max-width:440px;
-  max-height:320px;
+  max-width:585px;
+  max-height:425px;
   object-fit:contain;
   display:block;
 
