@@ -25,6 +25,28 @@ a{color:inherit; text-decoration:none}
 .container{max-width:1100px; margin:0 auto; padding:0 20px}
 
 /* ================= TOP BAR ================= */
+/* ===== Topbar logo sizing + alignment (clean fix) ===== */
+
+.topbar-inner{
+  display:flex;
+  align-items:center;          /* true vertical centering */
+  justify-content:space-between;
+  min-height:72px;             /* gives the logo room to breathe */
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+}
+
+/* Logo scaled up 125% */
+.brand-logo{
+  height:52px;                 /* was ~42px → 42 × 1.25 ≈ 52 */
+  width:auto;
+  display:block;
+}
+
+
 .brand-logo{
   height:175px;
   width:auto;
