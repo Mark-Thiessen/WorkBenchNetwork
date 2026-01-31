@@ -11,6 +11,7 @@
 
 *{box-sizing:border-box}
 html,body{height:100%}
+
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -25,13 +26,22 @@ a{color:inherit; text-decoration:none}
 .container{max-width:1100px; margin:0 auto; padding:0 20px}
 
 /* ================= TOP BAR ================= */
-/* ===== Topbar logo sizing + alignment (clean fix) ===== */
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:10;
+  backdrop-filter: blur(10px);
+  background: rgba(11,18,32,.6);
+  border-bottom:1px solid var(--line);
+}
 
 .topbar-inner{
   display:flex;
-  align-items:center;          /* true vertical centering */
+  align-items:center;
   justify-content:space-between;
-  min-height:72px;             /* gives the logo room to breathe */
+  padding:14px 0;
+  min-height:110px;              /* supports large logo */
 }
 
 .brand{
@@ -39,65 +49,49 @@ a{color:inherit; text-decoration:none}
   align-items:center;
 }
 
-/* Logo scaled up 125% */
 .brand-logo{
-  height:100px;                 /* was ~42px → 42 × 1.25 ≈ 52 */
+  height:90px;                   /* ~2.25× original 40px */
   width:auto;
   display:block;
 }
 
-
-.brand-logo{
-  height:175px;
-  width:auto;
-  display:block;
+.nav{
+  display:flex;
+  align-items:center;
+  gap:18px;
 }
 
-.topbar{
-  position:sticky; top:0;
-  backdrop-filter: blur(10px);
-  background: rgba(11,18,32,.6);
-  border-bottom: 1px solid var(--line);
-  z-index:10;
-}
-.topbar-inner{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px 0;
-}
-
-.brand{display:flex; gap:12px; align-items:center}
-.logo{
-  width:40px; height:40px; border-radius:12px;
-  display:grid; place-items:center;
-  background: linear-gradient(135deg, rgba(79,140,255,.9), rgba(124,58,237,.9));
-  box-shadow: var(--shadow);
-  font-weight:800;
-}
-.brand-name{font-weight:800; letter-spacing:.2px}
-.brand-tag{font-size:.85rem; color:var(--muted)}
-
-.nav{display:flex; gap:18px; align-items:center}
 .nav a{color:var(--muted)}
 .nav a:hover{color:var(--text)}
 
 /* ================= BUTTONS ================= */
 
 .btn{
-  display:inline-flex; align-items:center; justify-content:center;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   padding:12px 16px;
   border-radius:12px;
   background: linear-gradient(135deg, rgba(79,140,255,.95), rgba(124,58,237,.95));
   color:white;
   border:1px solid rgba(255,255,255,.12);
   box-shadow: 0 16px 40px rgba(0,0,0,.35);
+  line-height:1;
 }
+
 .btn:hover{transform: translateY(-1px)}
-.btn:active{transform: translateY(0px)}
-.btn-sm{padding:10px 12px; border-radius:10px}
+.btn:active{transform: translateY(0)}
+
+.btn-sm{
+  padding:10px 12px;
+  border-radius:10px;
+}
+
 .btn-ghost{
   background: rgba(255,255,255,.06);
   box-shadow:none;
 }
+
 .btn-ghost:hover{background: rgba(255,255,255,.10)}
 .btn-block{width:100%}
 
@@ -107,6 +101,7 @@ a{color:inherit; text-decoration:none}
   position:relative;
   padding:70px 0 20px;
 }
+
 .hero-grid{
   display:grid;
   grid-template-columns: 1.1fr .9fr;
@@ -136,15 +131,25 @@ h1{
   color:var(--muted);
   font-size:1.08rem;
   line-height:1.6;
-  max-width: 58ch;
+  max-width:58ch;
 }
 
-.cta-row{display:flex; gap:12px; flex-wrap:wrap; margin:14px 0 14px}
+.cta-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:14px 0;
+}
 
 .trust{
-  display:flex; flex-wrap:wrap; gap:10px;
-  margin-top:18px; color:var(--muted); font-size:.95rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+  color:var(--muted);
+  font-size:.95rem;
 }
+
 .trust span{
   border:1px solid var(--line);
   background: rgba(255,255,255,.04);
@@ -152,7 +157,7 @@ h1{
   border-radius:999px;
 }
 
-/* ================= HERO IMAGE (REPLACES CARD) ================= */
+/* ================= HERO IMAGE ================= */
 
 .hero-card.hero-image{
   display:flex;
@@ -161,13 +166,12 @@ h1{
 }
 
 .hero-card.hero-image img{
-  width:96%;                 /* ↓ reduce size by ~50% */
-  height:auto;
+  width:96%;
   max-width:585px;
   max-height:425px;
+  height:auto;
   object-fit:contain;
   display:block;
-
   border-radius:18px;
   border:1px solid var(--line);
   box-shadow: var(--shadow);
@@ -178,6 +182,7 @@ h1{
 /* ================= SECTIONS ================= */
 
 .section{padding:52px 0}
+
 .section.alt{
   background: rgba(255,255,255,.03);
   border-top:1px solid var(--line);
@@ -185,15 +190,21 @@ h1{
 }
 
 .section-head{
-  display:flex; align-items:flex-end; justify-content:space-between;
-  gap:18px; margin-bottom:18px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:18px;
 }
+
 .section-head h2{margin:0; font-size:1.8rem}
 .section-head p{margin:0; color:var(--muted); max-width:55ch}
 
+/* ================= CARDS ================= */
+
 .cards{
   display:grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0,1fr));
   gap:14px;
 }
 
@@ -203,6 +214,7 @@ h1{
   border-radius:16px;
   padding:16px;
 }
+
 .svc h3{margin:4px 0 8px}
 .svc p{margin:0 0 10px; color:var(--muted); line-height:1.6}
 .svc ul{margin:0; padding-left:18px; color:var(--muted); line-height:1.7}
@@ -211,25 +223,27 @@ h1{
 
 .steps{
   display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0,1fr));
   gap:14px;
 }
+
 .step{
   background: rgba(255,255,255,.04);
   border:1px solid var(--line);
   border-radius:16px;
   padding:16px;
 }
+
 .step-num{
-  width:34px; height:34px; border-radius:12px;
-  display:grid; place-items:center;
+  width:34px;
+  height:34px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
   background: rgba(79,140,255,.20);
   border:1px solid rgba(79,140,255,.35);
-  color: var(--text);
   font-weight:800;
 }
-.step h3{margin:10px 0 8px}
-.step p{margin:0; color:var(--muted); line-height:1.6}
 
 /* ================= CONTACT ================= */
 
@@ -237,14 +251,15 @@ h1{
   display:grid;
   grid-template-columns: 1.1fr .9fr;
   gap:14px;
-  align-items:stretch;
 }
+
 .contact-card{
   background: rgba(255,255,255,.04);
   border:1px solid var(--line);
   border-radius:16px;
   padding:16px;
 }
+
 .mini{
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -260,58 +275,37 @@ h1{
   border-top:1px solid var(--line);
   background: rgba(0,0,0,.15);
 }
+
 .footer-inner{
-  display:flex; align-items:center; justify-content:space-between;
-  gap:12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   color:var(--muted);
 }
-.footer-links{display:flex; gap:14px}
-.footer-links a:hover{color:var(--text)}
 
 /* ================= RESPONSIVE ================= */
 
-@media (max-width: 900px){
-  .hero-grid{grid-template-columns: 1fr}
-  .cards{grid-template-columns: 1fr}
-  .steps{grid-template-columns: 1fr}
-  .contact{grid-template-columns: 1fr}
-  .nav{gap:12px}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
 
   .hero-card.hero-image{
     justify-content:center;
   }
+
   .hero-card.hero-image img{
     width:85%;
     max-width:420px;
     max-height:none;
   }
-}
-/* ===== Topbar alignment fix ===== */
-.topbar-inner{
-  display:flex;
-  align-items:center;            /* center everything vertically */
-  justify-content:space-between;
-  min-height:64px;               /* gives a consistent bar height */
-  padding:12px 0;                /* slightly more balanced than 14px */
-}
 
-.brand{
-  display:flex;
-  align-items:center;            /* vertically centers the logo */
-  height:40px;                   /* matches button visual weight */
-}
+  .topbar-inner{
+    min-height:96px;
+  }
 
-.brand-logo{
-  height:40px;                   /* key: forces consistent logo height */
-  width:auto;
-  display:block;
-}
-
-/* Optional: keep button from looking "lower" due to line-height */
-.nav .btn{
-  line-height:1;                 /* removes baseline weirdness */
-  padding:12px 16px;             /* keep consistent */
-}
-.nav .btn.btn-sm{
-  padding:10px 12px;             /* keep consistent with your existing btn-sm */
+  .brand-logo{
+    height:72px;
+  }
 }
