@@ -8,19 +8,21 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- TOP BAR -->
   <header class="topbar">
     <div class="container topbar-inner">
 
-      <!-- LOGO -->
+      <!-- BRAND LOGO -->
       <div class="brand">
-        <img 
-          src="/croplogo.png" 
+        <img
+          src="/croplogo.png"
           alt="Workbench Network Logo"
           class="brand-logo"
         />
       </div>
 
-      <!-- NAV -->
+      <!-- NAV (trimmed) -->
       <nav class="nav">
         <a href="#contact" class="btn btn-sm">Book free call</a>
       </nav>
@@ -29,13 +31,16 @@
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Microsoft Azure and Powerbi Cloud</p>
           <h1>Great data drives efficiency, insights, and profits.</h1>
           <p class="subhead">
-            We deliver valuable business insights by leveraging all of your data correctly. We implement Azure SQL, Power BI, and automation —
+            We deliver valuable business insights by leveraging all of your data correctly.
+            We implement Azure SQL, Power BI, and automation —
             with real execution, not slide decks.
           </p>
 
@@ -45,10 +50,13 @@
           </div>
 
           <div class="trust">
-            <span>Azure SQL</span><span>Power BI</span><span>Automation</span>
+            <span>Azure SQL</span>
+            <span>Power BI</span>
+            <span>Automation</span>
           </div>
         </div>
 
+        <!-- HERO IMAGE -->
         <div class="hero-card hero-image">
           <img 
             src="/powerbipeople.png" 
@@ -61,17 +69,124 @@
       <div class="hero-glow" aria-hidden="true"></div>
     </section>
 
-    <!-- rest of your page remains unchanged -->
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>Pick a starting point. We’ll build a dashboard you can extend.</p>
+        </div>
+
+        <div class="cards">
+          <article class="svc">
+            <h3>Azure SQL + Data Foundations</h3>
+            <p>Schema, views, performance basics, and a clean “source of truth” that scales.</p>
+            <ul>
+              <li>Data modeling & indexing</li>
+              <li>Views for analytics</li>
+              <li>Security + access patterns</li>
+            </ul>
+          </article>
+
+          <article class="svc">
+            <h3>Power BI Dashboards</h3>
+            <p>Clear KPIs, fast models, and dashboards that get used weekly.</p>
+            <ul>
+              <li>Modeling & DAX measures</li>
+              <li>DirectQuery vs Import strategy</li>
+              <li>Performance tune-ups</li>
+            </ul>
+          </article>
+
+          <article class="svc">
+            <h3>Datalakes</h3>
+            <p>Centralize and report on all of your data from everywhere.</p>
+            <ul>
+              <li>API Integrations</li>
+              <li>Advanced data analytics accross your softwares</li>
+              <li>Really powerful business insight</li>
+            </ul>
+          </article>
+
+          <article class="svc">
+            <h3>Automation & Integrations</h3>
+            <p>Power Automate workflows to reduce admin work and eliminate manual steps.</p>
+            <ul>
+              <li>Data collection</li>
+              <li>Alerts, routing, approvals</li>
+              <li>Business workflow automations</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p>Simple, transparent, and execution-focused.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Quick discovery</h3>
+            <p>We map the goal, the data, and the bottlenecks. No fluff.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Build the foundation</h3>
+            <p>Clean data structure + permissions + the minimum viable workflow.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Ship improvements weekly</h3>
+            <p>Dashboards, automation, and refinements in small, usable releases.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container contact">
+        <div>
+          <h2>Book a free call</h2>
+          <p>
+            Tell us what you’re trying to accomplish. We’ll suggest a practical first step and timeline.
+          </p>
+          <p class="fine">
+            Replace the link below with your Microsoft Bookings or Calendly URL.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <a class="btn btn-block" href="https://workbenchnetwork.com">Book now</a>
+          <div class="mini">
+            <div><strong>Email</strong><br />admin@workbenchnetwork.com</div>
+            <div><strong>Location</strong><br />North America</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <div>© <span id="y"></span> Workbench Network</div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+      </div>
     </div>
   </footer>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
