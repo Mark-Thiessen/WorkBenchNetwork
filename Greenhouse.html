@@ -1,0 +1,38 @@
+<!-- save as: greenhouse.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ontario Greenhouse</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Full-screen Power BI embed page (no header, no text) */
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      overflow: hidden;
+    }
+
+    .pbi-frame {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      border: 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <iframe
+    class="pbi-frame"
+    title="Ontario Greenhouse"
+    src="https://app.powerbi.com/reportEmbed?reportId=60226e26-7623-4d6a-be5f-38b994792522&autoAuth=true&ctid=8bab3cef-f99c-48bf-aa27-0bf2f4d54b1f"
+    frameborder="0"
+    allowfullscreen="true"
+  ></iframe>
+</body>
+</html>
