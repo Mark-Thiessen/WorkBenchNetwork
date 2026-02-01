@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sample Power BI Reports | Workbench Network</title>
+
+  <meta name="description" content="Sample Power BI reports and dashboards built by Workbench Network." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TOP BAR (same as index.html) -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+
+      <div class="brand">
+        <img
+          src="croplogo.png"
+          alt="Workbench Network"
+          class="brand-logo"
+        />
+      </div>
+
+      <nav class="nav">
+        <a href="index.html" class="btn btn-sm btn-ghost">Home</a>
+        <a href="#samples" class="btn btn-sm">View samples</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+
+        <p class="eyebrow">Power BI • Azure SQL • Analytics</p>
+
+        <h1>Sample Power BI Reports</h1>
+
+        <p class="subhead">
+          A curated set of sample dashboards demonstrating how we design,
+          model, and deliver clear, business-ready Power BI reporting.
+          These examples showcase structure, performance, and insight —
+          not just visuals.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- SAMPLE LIST -->
+    <section id="samples" class="section">
+      <div class="container">
+
+        <div class="section-head">
+          <h2>Available Samples</h2>
+          <p>
+            Click any sample to open the report. Access may require sign-in,
+            depending on the dataset.
+          </p>
+        </div>
+
+        <div class="cards">
+
+          <!-- SAMPLE ITEM -->
+          <article class="svc">
+            <h3>📊 Ontario Greenhouse Production Dashboard</h3>
+            <p>
+              Production volumes, acreage, and crop trends by year.
+              Demonstrates clean modeling, time intelligence, and scalable visuals.
+            </p>
+            <ul>
+              <li>Azure SQL source</li>
+              <li>Star schema modeling</li>
+              <li>Year-over-year analysis</li>
+            </ul>
+            <a
+              href="PASTE_POWER_BI_URL_HERE"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-sm"
+            >
+              View report
+            </a>
+          </article>
+
+          <!-- SAMPLE ITEM -->
+          <article class="svc">
+            <h3>🏢 Portfolio Performance Overview</h3>
+            <p>
+              High-level KPIs for asset performance, occupancy, and cash flow.
+              Built for executive-level decision making.
+            </p>
+            <ul>
+              <li>DirectQuery optimization</li>
+              <li>Custom DAX measures</li>
+              <li>Performance tuning</li>
+            </ul>
+            <a
+              href="PASTE_POWER_BI_URL_HERE"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-sm"
+            >
+              View report
+            </a>
+          </article>
+
+          <!-- SAMPLE ITEM -->
+          <article class="svc">
+            <h3>⚙️ Operations & Workflow Analytics</h3>
+            <p>
+              Task volumes, cycle times, and automation effectiveness.
+              Shows how operational data can drive efficiency gains.
+            </p>
+            <ul>
+              <li>Power Automate integration</li>
+              <li>Operational KPIs</li>
+              <li>Trend and variance analysis</li>
+            </ul>
+            <a
+              href="PASTE_POWER_BI_URL_HERE"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-sm"
+            >
+              View report
+            </a>
+          </article>
+
+          <!-- ADD MORE SAMPLES AS NEEDED -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section alt">
+      <div class="container">
+
+        <div class="section-head">
+          <h2>Want a walkthrough?</h2>
+          <p>
+            We’re happy to explain how any of these reports were built and
+            how the same approach can be applied to your data.
+          </p>
+        </div>
+
+        <a href="index.html#contact" class="btn">
+          Book a free 20-minute call
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="y"></span> Workbench Network</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
