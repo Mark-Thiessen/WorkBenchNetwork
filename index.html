@@ -44,6 +44,7 @@
     <section class="hero">
       <div class="container hero-grid">
 
+        <!-- LEFT COPY -->
         <div class="hero-copy">
           <p class="eyebrow">Microsoft Azure and Power BI Cloud</p>
           <h1>Great data drives efficiency, insights, and profits.</h1>
@@ -71,22 +72,29 @@
           </div>
         </div>
 
-        <!-- HERO IMAGE + SAMPLE LINK -->
+        <!-- RIGHT IMAGE + BUTTON (FIXED) -->
         <div class="hero-card hero-image">
-          <img
-            src="powerbipeople.png"
-            alt="Power BI professionals collaborating on dashboards"
-            loading="eager"
-          />
+          <div style="
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            width:100%;
+          ">
 
-          <!-- NEW BUTTON BELOW IMAGE -->
-          <div style="margin-top:16px; text-align:center;">
+            <img
+              src="powerbipeople.png"
+              alt="Power BI professionals collaborating on dashboards"
+              loading="eager"
+            />
+
             <a
               href="https://workbenchnetwork.com/sample-powerbi.html"
               class="btn btn-sm"
+              style="margin-top:16px;"
             >
               View Sample Power BI Reports
             </a>
+
           </div>
         </div>
 
@@ -147,36 +155,6 @@
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section id="how" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>How it works</h2>
-          <p>Simple, transparent, and execution-focused.</p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <h3>Quick discovery</h3>
-            <p>We map the goal, the data, and the bottlenecks. No fluff.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-num">2</div>
-            <h3>Build the foundation</h3>
-            <p>Clean data structure, permissions, and the minimum viable workflow.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-num">3</div>
-            <h3>Ship improvements weekly</h3>
-            <p>Dashboards, automation, and refinements in small, usable releases.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="container contact">
@@ -223,3 +201,4 @@
 
 </body>
 </html>
+
