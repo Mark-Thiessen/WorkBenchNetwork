@@ -22,7 +22,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
 
-          # IMPORTANT: deploy repo root exactly as-is (no build output folder)
-          app_location: "."
+          # Publish the repo root as the site (static HTML/CSS)
+          app_location: "/"
           api_location: ""
-          # DO NOT set output_location for plain HTML/CSS
+          output_location: ""
