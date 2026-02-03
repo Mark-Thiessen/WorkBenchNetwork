@@ -2,12 +2,7 @@
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [
-      "/demo/*",
-      "/*.css",
-      "/*.png",
-      "/*.jpg",
-      "/*.svg",
-      "/*.ico"
+      "/*.*"
     ]
   }
 }
