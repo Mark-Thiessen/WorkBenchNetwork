@@ -38,4 +38,5 @@ jobs:
           output_location: ""
 
           # FORCE which config file to use
-          config_file_location: "staticwebapp.config.json"
+          # config_file_location: "staticwebapp.config.json"
+
