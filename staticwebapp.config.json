@@ -1,8 +1,7 @@
 {
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": [
-      "/*.*"
-    ]
-  }
+  "routes": [
+    { "route": "/client/index.html", "serve": "/client/index.html" },
+    { "route": "/demo/index.html", "serve": "/demo/index.html" }
+  ],
+  "navigationFallback": { "rewrite": "/index.html" }
 }
